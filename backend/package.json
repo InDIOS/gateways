@@ -1,0 +1,24 @@
+{
+  "name": "gateways",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Gateways Manager Application",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "debug": "node-dev ../dist/backend/index.js"
+  },
+  "keywords": [],
+  "author": "Roberto Asiel Guevara Castañeda",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.3",
+    "node-dev": "^6.4.0",
+    "typescript": "^4.2.3"
+  }
+}
