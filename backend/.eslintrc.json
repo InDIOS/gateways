@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "amd": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-const-assign": "error",
+    "no-this-before-super": "warn",
+    "no-undef": "error",
+    "semi": "warn",
+    "eqeqeq": ["warn", "smart"],
+    "no-unreachable": "error",
+    "no-unused-vars": [
+      "warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false, "argsIgnorePattern": "^_" }
+    ],
+    "constructor-super": "warn",
+    "valid-typeof": "error"
+  }
+}
