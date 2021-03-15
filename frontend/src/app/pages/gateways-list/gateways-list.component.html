@@ -1,1 +1,34 @@
-<p>gateways-list works!</p>
+<div class="text-right">
+  <a class="btn btn-primary" [routerLink]="['/gateway', 'new']">Add a Gateway</a>
+</div>
+<hr />
+<section class="panel">
+  <table class="table table-striped table-advance table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Serial</th>
+        <th>Address</th>
+        <th>Devices</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="gateways.length === 0">
+        <td class="text-center" colspan="5">There isn't gateways to show</td>
+      </tr>
+      <tr *ngFor="let gateway of gateways">
+        <td>{{ gateway.name }}</td>
+        <td>{{ gateway.serial }}</td>
+        <td>{{ gateway.address }}</td>
+        <td>{{ gateway.devices?.length }}</td>
+        <td>
+          <div class="btn-group">
+            <a class="btn btn-success" [routerLink]="['/gateway', gateway._id]"><i class="icon_pencil-edit"></i></a>
+            <button class="btn btn-danger" (click)="removeGatewayById(gateway._id)"><i class="icon_close"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

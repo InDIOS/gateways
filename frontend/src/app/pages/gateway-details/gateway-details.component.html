@@ -1,1 +1,73 @@
-<p>gateway-details works!</p>
+<section class="panel">
+  <header class="panel-heading">{{ isNew ? 'New' : 'Edit'}} Gateway</header>
+  <div class="panel-body">
+    <div class="form">
+      <form class="form-validate form-horizontal" [formGroup]="form">
+        <div class="form-group">
+          <label for="cname" class="control-label col-lg-2">Name</label>
+          <div class="col-lg-10">
+            <input class="form-control" formControlName="name" type="text" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cemail" class="control-label col-lg-2">Serial</label>
+          <div class="col-lg-10">
+            <input class="form-control" formControlName="serial" type="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="curl" class="control-label col-lg-2">Address</label>
+          <div class="col-lg-10">
+            <input class="form-control" formControlName="address" type="text" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <button class="btn btn-primary" type="submit" (click)="saveGateway()">Save</button>
+            <button class="btn btn-default" type="button" (click)="goToList()">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<ng-container *ngIf="!isNew">
+  <ng-container *ngIf="gateway && gateway.devices.length < 10">
+    <div class="text-right">
+      <a class="btn btn-primary" [routerLink]="['device', 'new']">Add a Device</a>
+    </div>
+    <hr />
+  </ng-container>
+
+  <section class="panel">
+    <table class="table table-striped table-advance table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>UID</th>
+          <th>Vendor</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="gateway && gateway.devices.length === 0">
+          <td class="text-center" colspan="5">There isn't devices to show</td>
+        </tr>
+        <tr *ngFor="let device of gateway?.devices">
+          <td>{{ device.uid }}</td>
+          <td>{{ device.vendor }}</td>
+          <td>{{ device.date | date:'yyyy/MM/dd' }}</td>
+          <td>{{ device.status }}</td>
+          <td>
+            <div class="btn-group">
+              <a class="btn btn-success" [routerLink]="['/device', device._id]"><i class="icon_pencil-edit"></i></a>
+              <button class="btn btn-danger" (click)="removeDeviceById(device._id)"><i class="icon_close"></i></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</ng-container>
