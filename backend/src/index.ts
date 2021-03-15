@@ -1,4 +1,4 @@
-import cors from 'cors';
+import { join } from 'path';
 import mongoose from 'mongoose';
 import express, { NextFunction, Request, Response } from 'express';
 import api from './api';
@@ -13,13 +13,17 @@ mongoose
     console.log(error);
   });
 
-app.use(cors({ origin: '127.0.0.1:4200' }));
-app.use(express.json());
-
-app.get('/test', (_, res) => {
-  res.send(`It's working!`);
+// app.use(cors({ origin: 'http://localhost:4200' }));
+app.get('/*', (req, res, next) => {
+  if (!req.path.startsWith('/api')) {
+    const assets = req.path === '/' || !req.path.includes('.') ? 'index.html' : `.${req.path}`;
+    res.status(200).sendFile(assets, { root: join(__dirname, 'public') });
+  } else {
+    next();
+  }
 });
 
+app.use(express.json());
 app.use('/api', api);
 
 // 404 Not Found URL
