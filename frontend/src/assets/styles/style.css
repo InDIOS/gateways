@@ -4,13 +4,6 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
 */
-/* Import fonts */
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-
-@import url(line-icons.css);
-
-
 
 body {
 
@@ -137,50 +130,6 @@ table tr th { color: #688a7e;}
     background-color: #f1f2f7;
 
 }
-
-.login-img-body{
-
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-
-  -moz-background-size: cover;
-
-  -o-background-size: cover;
-
-  background-size: cover;
-
-}
-
-.login-img2-body{
-
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-
-  -moz-background-size: cover;
-
-  -o-background-size: cover;
-
-  background-size: cover;
-
-}
-
-.login-img3-body{
-
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-
-  -moz-background-size: cover;
-
-  -o-background-size: cover;
-
-  background-size: cover;
-
-}
-
-
 
 .login-form {
 
@@ -699,8 +648,6 @@ ul.sidebar-menu li a{
     -ms-transition: all 0.3s ease;
 
     transition: all 0.3s ease;
-
-    border-right: 1px solid #D7D7D7;
 
     border-bottom: 1px solid #D7D7D7;
 
@@ -1223,23 +1170,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 
-
-.navbar-form .form-control{
-
-    width: 200px;
-
-    height: 30px;
-
-    background: white url('../img/icons/search-line-icon.png') no-repeat 3px;
-
-    padding-left: 24px;
-
-    margin-top: 1px;
-
-}
-
-
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
     /* Safari and Chrome */
@@ -1714,23 +1644,6 @@ div[data-role="editor-toolbar"] {
 
 }
 
-
-
-.log-arrow-up {
-
-    background: url("../img/arrow-up.png") no-repeat;
-
-    width: 20px;
-
-    height: 11px;
-
-    position: absolute;
-
-    right: 20px;
-
-    top: -10px;
-
-}
 
 /*----*/
 
@@ -2387,8 +2300,6 @@ div[data-role="editor-toolbar"] {
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1);
 
 
-
-}
 
 }
 
@@ -3508,36 +3419,6 @@ div[data-role="editor-toolbar"] {
 
 
 
-.search {
-
-    margin-top: 6px ;
-
-    width: 20px;
-
-    -webkit-transition: all .3s ease;
-
-    -moz-transition: all .3s ease;
-
-    -ms-transition: all .3s ease;
-
-    -o-transition: all .3s ease;
-
-    transition: all .3s ease;
-
-    border: 1px solid #fff;
-
-    box-shadow: none;
-
-    background: url("../img/search-icon.jpg") no-repeat 10px 8px;
-
-    padding:0 5px 0 35px;
-
-    color: #fff;
-
-}
-
-
-
 .search:focus {
 
     margin-top: 5px ;
@@ -3747,20 +3628,6 @@ div[data-role="editor-toolbar"] {
     padding: 0px;
 
 }
-
-.panel-body.chart-texture {
-
-    background: url("../img/chart-texture.jpg");
-
-    -webkit-border-radius: 4px 4px 0px 0px;
-
-    border-radius: 4px 4px 0px 0px;
-
-    padding: 0px;
-
-}
-
-
 
 
 
@@ -4428,38 +4295,6 @@ ul.ft-link li a i {
 
 
 
-.owl-buttons .owl-prev {
-
-    text-indent: -9999px;
-
-    background: url("../img/left-arrow.png") no-repeat;
-
-    width: 6px;
-
-    height: 10px;
-
-    display: inline-block;
-
-}
-
-
-
-.owl-buttons .owl-next {
-
-    text-indent: -9999px;
-
-    background: url("../img/right-arrow.png") no-repeat;
-
-    width: 6px;
-
-    height: 10px;
-
-    display: inline-block;
-
-}
-
-
-
 /*product post*/
 
 
@@ -4859,12 +4694,6 @@ ul.ft-link li a i {
 
 
 /*profile-widget image bg*/
-
-.profile-widget-img{
-
-    background: url('../img/backgrounds/bg-11-small.jpg') no-repeat !important;
-
-}
 
 .profile-nav .profile-widget-img .bg-layer {
 
@@ -5533,24 +5362,6 @@ ul.ft-link li a i {
 }
 
 /*weather widget 2*/
-
-.weather-bg-img {
-
-    background: url(../img/backgrounds/bg-14-small.jpg) no-repeat center center;
-
-    color: #fff;
-
-    text-shadow: 0px 1px 5px #fed189;
-
-    text-align: center;
-
-    font-size: 16px;
-
-    font-weight: 300;
-
-}
-
-
 
 .weather-bg-img i {
 
@@ -8289,45 +8100,6 @@ table.sliders tr td {
 /*----switch ----*/
 
 
-
-
-
-.has-switch {
-
-    border-radius: 30px;
-
-    -webkit-border-radius: 30px;
-
-    display: inline-block;
-
-    cursor: pointer;
-
-    line-height: 1.231;
-
-    overflow: hidden;
-
-    position: relative;
-
-    text-align: left;
-
-    width: 80px;
-
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-
-    mask: url('../img/mask.png') 0 0 no-repeat;
-
-    -webkit-user-select: none;
-
-    -moz-user-select: none;
-
-    -ms-user-select: none;
-
-    -o-user-select: none;
-
-    user-select: none;
-
-}
-
 .has-switch.deactivate {
 
     opacity: 0.5;
@@ -8517,18 +8289,6 @@ table.sliders tr td {
     transition: 0.25s ease-out;
 
     -webkit-backface-visibility: hidden;
-
-}
-
-.switch-square {
-
-    border-radius: 6px;
-
-    -webkit-border-radius: 6px;
-
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-
-    mask: url('../img/mask.png') 0 0 no-repeat;
 
 }
 
@@ -8847,40 +8607,6 @@ table.sliders tr td {
     padding-left: 34px;
 
 }
-
-
-
-.has-js .label_radio {
-
-    background: url(../img/checkbox/radio-off.png) no-repeat;
-
-}
-
-
-
-.has-js .label_check {
-
-    background: url(../img/checkbox/check-off.png) no-repeat;
-
-}
-
-
-
-.has-js label.c_on {
-
-    background: url(../img/checkbox/check-on.png) no-repeat;
-
-}
-
-
-
-.has-js label.r_on {
-
-    background: url(../img/checkbox/radio-on.png) no-repeat;
-
-}
-
-
 
 .has-js .label_check input,
 
@@ -9861,12 +9587,6 @@ span.customSelect {
 span.customSelect.changed {
 
     background-color: #fff;
-
-}
-
-.customSelectInner {
-
-    background:url(../img/customSelect-arrow.gif) no-repeat center right;
 
 }
 
