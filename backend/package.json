@@ -8,7 +8,8 @@
     "build": "tsc -p .",
     "build:watch": "npm run build -- -w",
     "debug": "node-dev ./dist/index.js",
-    "start": "node ./dist/index.js"
+    "start": "npm run build && node ./dist/index.js",
+    "test": "npm run build && jasmine --config=jasmine.json --reporter=jasmine-ts-console-reporter"
   },
   "keywords": [],
   "author": "Roberto Asiel Guevara Castañeda",
@@ -25,7 +26,6 @@
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "eslint": "^7.21.0",
-    "jasmine": "^3.6.4",
     "node-dev": "^6.4.0",
     "typescript": "^4.2.3"
   }
