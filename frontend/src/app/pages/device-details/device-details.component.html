@@ -1,1 +1,37 @@
-<p>device-details works!</p>
+<section class="panel">
+  <header class="panel-heading">Edit Device</header>
+  <div class="panel-body">
+    <div class="form">
+      <form class="form-validate form-horizontal" [formGroup]="form">
+        <div class="form-group">
+          <label for="cname" class="control-label col-lg-2">UID</label>
+          <div class="col-lg-10">
+            <input class="form-control" formControlName="uid" type="text" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cemail" class="control-label col-lg-2">Vendor</label>
+          <div class="col-lg-10">
+            <input class="form-control" formControlName="vendor" type="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="curl" class="control-label col-lg-2">Status</label>
+          <div class="col-lg-10">
+            <select class="form-control" formControlName="status" required>
+              <option>Select an option</option>
+              <option value="online">Online</option>
+              <option value="offline">Offline</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <button class="btn btn-primary" type="submit" (click)="saveDevice()">Save</button>
+            <button class="btn btn-default" type="button" (click)="goToList()">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
