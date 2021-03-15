@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'gateway/:id', component: GatewayDetailsComponent },
   { path: 'devices', component: DevicesListComponent },
   { path: 'device/:id', component: DeviceDetailsComponent },
+  { path: 'gateway/:gid/device/:id', component: DeviceDetailsComponent },
 ];
 
 @NgModule({
