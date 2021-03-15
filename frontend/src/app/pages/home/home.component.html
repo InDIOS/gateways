@@ -1,1 +1,22 @@
-<p>home works!</p>
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="info-box blue-bg" (click)="goToGateways()">
+      <i class="fa fa-cloud-download"></i>
+      <div class="count">{{ gatewaysCount }}</div>
+      <div class="title">Gateways</div>
+    </div>
+    <!--/.info-box-->
+  </div>
+  <!--/.col-->
+
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="info-box brown-bg" (click)="goToDevices()">
+      <i class="fa fa-shopping-cart"></i>
+      <div class="count">{{ devicesCount }}</div>
+      <div class="title">Devices</div>
+    </div>
+    <!--/.info-box-->
+  </div>
+  <!--/.col-->
+</div>
+<!--/.row-->
