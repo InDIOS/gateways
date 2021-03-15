@@ -23,10 +23,15 @@ router.post('/gateway/:gatewayId/device', async (req, res, next) => {
     const gateway = await Gateway.findOne({ _id });
     if (gateway) {
       const device = new Device(req.body);
-      gateway.get('devices').push(device);
-      await device.save();
-      await gateway.save();
-      res.status(200).send(device.toJSON({ versionKey: false }));
+      const devices: Document[] = gateway.get('devices');
+      if (devices.length < 10) {
+        gateway.get('devices').push(device);
+        await device.save();
+        await gateway.save();
+        res.status(200).send(device.toJSON({ versionKey: false }));
+      } else {
+        res.status(400).send({ statusCode: 400, message: 'Maximun number of devices reached' });
+      }
     } else {
       res.status(400).send(createError(_id));
     }
@@ -66,7 +71,7 @@ router
   .put((req, res, next) => {
     const _id = req.params.id;
     catchError(async () => {
-      await Gateway.findOneAndUpdate({ _id }, req.body);
+      await Gateway.findOneAndUpdate({ _id }, req.body, { useFindAndModify: false });
       const gateway = await Gateway.findOne({ _id });
       res.status(gateway ? 200 : 400).send(gateway?.toJSON({ versionKey: false }) || createError(_id));
     }, next);

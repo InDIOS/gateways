@@ -28,7 +28,7 @@ router
   .put((req, res, next) => {
     const _id = req.params.id;
     catchError(async () => {
-      await Device.findOneAndUpdate({ _id }, req.body);
+      await Device.findOneAndUpdate({ _id }, req.body, { useFindAndModify: false });
       const device = await Device.findOne({ _id });
       res.status(device ? 200 : 400).send(device?.toJSON({ versionKey: false }) || createError(_id));
     }, next);
