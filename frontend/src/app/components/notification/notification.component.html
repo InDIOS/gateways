@@ -1,0 +1,6 @@
+<div *ngFor="let n of notifications$ | async" [ngClass]="'alert alert-' + n.type">
+  <button class="close" (click)="closeNotification(n)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>{{ n.title }}:</strong> {{ n.description }}
+</div>
